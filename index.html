@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telebot</title>
+  <link rel="manifest" href="/manifest.json">
+  <style>
+    body {
+      text-align: center;
+      padding-top: 50px;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    <a href="https://alexeyau.github.io/telebot-app/">
+      Telebot app >>>
+    </a>
+  </h1>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(function(registration) {
+          console.log('Service Worker зарегистрирован успешно:', registration);
+        })
+        .catch(function(error) {
+          console.log('Ошибка при регистрации Service Worker:', error);
+        });
+    }
+  </script>
+</body>
+</html>
